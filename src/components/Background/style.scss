@@ -1,0 +1,61 @@
+.backgroundScreen {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+.tranding-section {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 120px);
+  overflow-x: auto;
+  left: 120px;
+  p {
+    color: white;
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+.movie-description {
+  position: absolute;
+  max-width: 50%;
+  top: 2%;
+  left: 140px;
+  color: white;
+  .category {
+    color: #858688;
+    text-transform: uppercase;
+  }
+  .additional-info {
+    display: flex;
+    gap: 10px;
+  }
+  .description {
+    padding: 10px 0 10px 0;
+  }
+  .actions {
+    display: flex;
+    padding: 20px 0 20px 0;
+    button {
+      width: 240px;
+      height: 72px;
+      border-radius: 40px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 32px;
+      letter-spacing: -0.32px;
+      border: unset;
+      cursor: pointer;
+    }
+  }
+  .more-btn {
+    background-color: #2727f5;
+    color: white;
+  }
+
+  .play-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 18px;
+  }
+}

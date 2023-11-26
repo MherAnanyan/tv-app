@@ -1,0 +1,148 @@
+.menu {
+  width: 310px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: -200px;
+  background-color: #040404;
+  z-index: 999;
+  animation: floatToRight 0.5s forwards ease-in-out;
+
+  @keyframes floatFromLeft {
+    0% {
+      left: -200px;
+    }
+    100% {
+      left: 0;
+    }
+  }
+
+  @keyframes floatToRight {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -200px;
+    }
+  }
+
+  .profil-avatar {
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    cursor: pointer;
+    .profil-circular {
+      img {
+        height: 75px;
+        width: 75px;
+        border-radius: 50%;
+        display: inline-block;
+      }
+    }
+    .profil-name {
+      margin-left: 10px;
+      font: normal normal bold 32px/30px normal;
+      color: white;
+    }
+  }
+
+  .menu-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    .menu-item {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      margin-bottom: 20px;
+      cursor: pointer;
+      transition: transform 0.3s;
+      display: flex;
+      align-items: center;
+      margin-left: 200px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 0;
+      img {
+        margin-right: 0;
+      }
+
+      span.title {
+        display: inline-block;
+      }
+
+      span.hidden {
+        display: none;
+      }
+
+      &:hover {
+        background-color: #191e2e;
+      }
+    }
+    .selected {
+      background: #3b486d;
+    }
+  }
+
+  &.hovered {
+    animation: floatFromLeft 0.5s forwards ease-in-out;
+    padding-left: 30px;
+    .profil-avatar {
+      visibility: visible;
+    }
+    .menu-footer {
+      visibility: visible;
+    }
+    .menu-items {
+      align-items: start;
+    }
+    .menu-item {
+      margin-left: 0;
+      width: 220px;
+      height: 60px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: start;
+      padding: 15px;
+
+      img {
+        margin-right: 15px;
+      }
+
+      span.hidden {
+        font-size: 18px;
+        font-weight: 700;
+        display: inline-block;
+      }
+    }
+    .selected {
+      background: #3b486d;
+    }
+  }
+
+  .menu-footer {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin-bottom: 30px;
+    span {
+      color: #858688;
+      cursor: pointer;
+      font: normal normal bold 24px/42px normal;
+    }
+  }
+}
